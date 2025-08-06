@@ -2,6 +2,15 @@
 
 > - A playground anything related to Backend System with Go.
 
+> - Below are the available routes.
+
+```plaintext
+origin: http://localhost:7000
+
+/ready
+```
+
+
 <br />
 <br />
 <br />
