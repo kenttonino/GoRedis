@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"go-backend/redis/utils"
+	redis_utils "go-backend/redis/utils"
 
 	"github.com/redis/go-redis/v9"
 )
@@ -19,7 +19,7 @@ func main() {
 
 	ctx := context.Background()
 
-	rp1D := &utils.RedisPayload{Id: "id-1", Description: "Welcome"}
+	rp1D := &redis_utils.RedisPayload{Id: "id-1", Description: "Welcome"}
 	rp1B, _ := json.Marshal(rp1D)
 
 	err := client.Set(ctx, "redis/foo", rp1B, 0).Err()
