@@ -4,5 +4,5 @@ redis-docker:
 	# * Launch the Redis container.
 	docker run -d --name my-redis -p 6379:6379 redis
 
-redis:
-	go run ./redis/main.go
+run:
+	go run ./src/main.go
