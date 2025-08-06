@@ -5,9 +5,7 @@
 > - Below are the available routes.
 
 ```plaintext
-origin: http://localhost:7000
-
-/ready
+http://localhost:3000/ready
 ```
 
 
@@ -22,6 +20,6 @@ origin: http://localhost:7000
 > - Run the following commands.
 
 ```sh
-# * Rebuild the target regardless if its up to date.
-make -B <target>
+# * Run the HTTP server.
+make run
 ```
