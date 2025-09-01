@@ -1,9 +1,9 @@
 package routes
 
 import (
+	"Go-Backend/src/utils"
 	"encoding/json"
 	"fmt"
-	"go-backend/src/utils"
 	"net/http"
 )
 

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"go-backend/src/routes"
-	"go-backend/src/utils"
+	"Go-Backend/src/routes"
+	"Go-Backend/src/utils"
 	"log"
 	"net/http"
 	"os"
