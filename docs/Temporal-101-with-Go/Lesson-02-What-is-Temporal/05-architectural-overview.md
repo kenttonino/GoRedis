@@ -16,6 +16,14 @@
 
 <br />
 
+`Frontend Service`
+#
+
+> - This part of Temporal Server acts as API gateway.
+> - In other words, it is a frontend for clients, not end users (those who interact with the CLI or Web UI).
+
+<br />
+
 Clients that communicate with the Temporal Server:
 #
 
