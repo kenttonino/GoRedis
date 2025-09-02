@@ -42,3 +42,24 @@ Clients that communicate with the Temporal Server:
 > - Communication to and within the Cluster is done using gRPC, a popular high performance open source RPC framework originally developed at Google and now part of the Cloud Native Computing Foundation ecosystem.
 > - The messages themselves are encoded using Protocol Buffers, and open source serialization mechanism also originally developed at Google.
 > - All of this communication can be secured with TLS, which encrypts the data as it is transmitted across the network and can also verify the identity of the client and server by validating their certificates.
+
+<br />
+<br />
+<br />
+
+
+
+# Temporal Cluster
+
+![05-temporal-architecture](./images/05-temporal-architecture.png)
+
+<br />
+
+`Temporal Cluster`
+#
+
+> - Is it the complete system, which is a deployment of the Temporal Server software on some number of machines, plust the additional components used with it.
+> - The only required component is database, such as SQL.
+> - This tracks the current state of every execution of your Workflows.
+> - It also maintains a history of all Events that occur their executions, which it uses to reconstruct the current state in case of failure.
+> - It persists this and other information, such as details related to durable timers and queues, to the database.
