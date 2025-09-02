@@ -63,3 +63,16 @@ Clients that communicate with the Temporal Server:
 > - This tracks the current state of every execution of your Workflows.
 > - It also maintains a history of all Events that occur their executions, which it uses to reconstruct the current state in case of failure.
 > - It persists this and other information, such as details related to durable timers and queues, to the database.
+> - ElasticSearch is an optional component.
+> - It's not necessary for basic operation, but adding it will give you advanced searching, sorting, and filtering capabilities for information about current and recent Workflow Executions.
+> - This is helpful when you run Workflows millions of times and need to locate a specific one; for example, bbased on when it started, how long it took to run, or its final status.
+> - Prometheus is often used to collect metrics from Temporal, while Grafana is used to create dashboards based on those metrics.
+> - Together, these tools help operations teams monitor cluster and application health.
+
+<br />
+<br />
+<br />
+
+
+
+# Workers
