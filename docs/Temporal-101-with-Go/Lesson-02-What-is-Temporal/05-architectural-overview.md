@@ -94,3 +94,11 @@ Clients that communicate with the Temporal Server:
 > - At runtime, you'll need everything required to execute the application, which will include any libraries or other dependencies referenced in your code, on each machine where at least one Worker process will run.
 
 <br />
+<br />
+<br />
+
+
+
+# Worker Connectivity
+
+> - Since the Worker uses a Temporal Client to communicate with the Temporal Cluster, each machine running a Worker will require connectivity to the Cluster's Frontend Service, which listens to TCP port 7233 by default.
