@@ -76,3 +76,17 @@ Clients that communicate with the Temporal Server:
 
 
 # Workers
+
+![06-temporal-architecture](./images/06-temporal-architecture.png)
+
+> - One thing that people new to Temporal may find surprising is the Temporal Cluster does not execute your code.
+> - While the platform guarantees the durable execution of your code, it achieves this through orchestration.
+> - The execution of your application code is external to the cluster, and in typical deployments, takes place on a separate set of servers, potentially running in a different data center than the Temporal Cluster.
+
+<br />
+
+`Worker`
+#
+
+> - The entity responsible for executing your code, and it's common to run Workers on multiple servers, since this increases both the scalability and availability of your application.
+> - It is part of your application, communicates with the Temporal Cluster to manage the execution of your Workflows.
