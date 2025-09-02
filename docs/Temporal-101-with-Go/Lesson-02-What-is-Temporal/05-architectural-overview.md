@@ -90,3 +90,5 @@ Clients that communicate with the Temporal Server:
 
 > - The entity responsible for executing your code, and it's common to run Workers on multiple servers, since this increases both the scalability and availability of your application.
 > - It is part of your application, communicates with the Temporal Cluster to manage the execution of your Workflows.
+> - The application will contain the code used to initialize the Worker, the Workflow and other functions that comprise your business logic, and possibly also code used to start or check the status of the Workflow.
+> - At runtime, you'll need everything required to execute the application, which will include any libraries or other dependencies referenced in your code, on each machine where at least one Worker process will run.
