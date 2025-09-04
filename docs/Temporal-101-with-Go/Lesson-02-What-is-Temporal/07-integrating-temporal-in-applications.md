@@ -27,3 +27,4 @@
 ![08-integration-application-backend-application](./images/08-integration-through-backend-application.png)
 
 > - A more typical approach is to have the end user application make calls to a service, such as a web application that provides a REST endpoint, which acts as an application gateway and uses a Temporal Client to interact with the Cluster.
+> - For example, imagine that the end user submits a form in a web application, which results in a request to an endpoint associated with order processing.
