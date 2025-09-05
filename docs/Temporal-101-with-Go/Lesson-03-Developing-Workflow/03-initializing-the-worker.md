@@ -66,3 +66,20 @@ There are typically three things you need in order to configure a Worker:
 > - Once you call the Run function of Worker, the Worker will then begin a "long poll" on the specified task queue.
 > - If you start the Worker from a terminal using a program like the one shown above, don't be surprised if you see nothing more than a few lines of output.
 > - It is the expected behavior and the program isn't stuck, it's just busy polling the task queue and working on the tasks that it has accepted from the Temporal Client.
+
+<br />
+<br />
+<br />
+
+
+
+# The Lifetime of Worker
+
+> - The lifetime of the Worker and the duration of Workflow Execution are unrelated.
+> - The `Run` function used to start this Worker is a blocking function that doesn't stop unless it is terminated or encounters a fatal error.
+> - The Worker's process may last for days, weeks, or longer.
+> - If the Workflows handles are relatively short, then a single Worker might execute thousands or even millions of them during its lifetime.
+> - On the other hand, a Workflow can run for years, while the server where a Worker process is running might be rebooted after a few months by an administrator doing maintenance.
+> - If the Workflow Type was registered with other workers, one or more of them will automatically continue where the original Worker left off.
+> - If there are no other Workers available, then the Workflow Execution will continue where it left off as soon as the original Worker is restarted.
+> - In either case, the downtime will not cause Workflow Execution to fail.
