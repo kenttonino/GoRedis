@@ -83,3 +83,14 @@ There are typically three things you need in order to configure a Worker:
 > - If the Workflow Type was registered with other workers, one or more of them will automatically continue where the original Worker left off.
 > - If there are no other Workers available, then the Workflow Execution will continue where it left off as soon as the original Worker is restarted.
 > - In either case, the downtime will not cause Workflow Execution to fail.
+
+<br />
+<br />
+<br />
+
+
+
+# Choosing Names for Task Queues
+
+> - Task queue are case sensitive.
+> - Example task queue name is `greeting-tasks`.
