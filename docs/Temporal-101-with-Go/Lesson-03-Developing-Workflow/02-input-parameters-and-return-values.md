@@ -14,3 +14,16 @@
 # Data Confidentiality
 
 > - Although the input parameters and return values are stored as part of the Event History of your Workflow Executions, you can create a custom Data Converter to encrypt the data as it enters the Temporal Cluster and decrypt it upon exit, thereby maintaining the confidentiality of any sensitive data used as input or output of your applications.
+
+<br />
+<br />
+<br />
+
+
+
+# Avoid Passing Large Amounts of Data
+
+> - Because the Event History contains the input and output, which is also sent across the network from the application of the Temporal Cluster, you'll have better performance if you limit the amount of data sent.
+> - For example, imagine you've created a Workflow that will convert audio files from one format to another.
+> - It would be much better to pass the path or URL for the files as input than to pass the content of the files.
+> - To protect against unexpected failures caused by sending or storing too much data, the Temporal Server imposes various limits beyond which it will emit warnings or errors, depending on the severity.
