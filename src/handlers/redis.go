@@ -12,12 +12,8 @@ import (
 )
 
 func RedisHandler(w http.ResponseWriter, r *http.Request) {
-	response := &utils.HTTPResponse{Message: "Redis is ready.", Status: 200}
-	responseJson, _ := json.Marshal(response)
-
 	ctx := context.Background()
 	redisClient := services.NewRedisClient()
-
 	_, err := redisClient.Ping(ctx).Result()
 
 	if err != nil {
@@ -28,6 +24,8 @@ func RedisHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	response := &utils.HTTPResponse{Message: "Redis is ready.", Status: 200}
+	responseJson, _ := json.Marshal(response)
 	log.Print(utils.TextGreen("/redis " + strconv.Itoa(response.Status)))
 	fmt.Fprint(w, string(responseJson))
 }
