@@ -5,7 +5,9 @@
 > - Below are the available routes.
 
 ```plaintext
-http://localhost:3000/ready
+http://localhost:3000
+/ready
+/redis
 ```
 
 
