@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Go-Backend/src/routes"
+	"Go-Backend/src/handlers"
 	"Go-Backend/src/utils"
 	"log"
 	"net/http"
@@ -20,7 +20,8 @@ func main() {
 	log.Print(utils.TextGreen("Server live at port http://localhost:" + port))
 
 	// * These are all the server routes.
-	http.HandleFunc("/", routes.ReadyHandler)
+	http.HandleFunc("/", handlers.ReadyHandler)
+	http.HandleFunc("/redis", handlers.RedisHandler)
 
 	// * You can setup the server here.
 	s := &http.Server{
