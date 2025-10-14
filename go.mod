@@ -1,4 +1,4 @@
-module Go-Backend
+module GoRedis
 
 go 1.24.4
 

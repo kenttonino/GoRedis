@@ -4,6 +4,9 @@ redis-docker:
 	# * Launch the Redis container.
 	docker run -d --name my-redis -p 6379:6379 redis
 
+build:
+	go build -o ./bin/main ./src/main.go
+
 install:
 	go mod tidy
 

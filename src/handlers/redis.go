@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	services "Go-Backend/src/services/redis_service"
-	"Go-Backend/src/utils"
+	services "GoRedis/src/services/redis_service"
+	"GoRedis/src/utils"
 	"context"
 	"encoding/json"
 	"fmt"

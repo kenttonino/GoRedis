@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Go-Backend/src/handlers"
-	"Go-Backend/src/utils"
+	"GoRedis/src/handlers"
+	"GoRedis/src/utils"
 	"log"
 	"net/http"
 	"os"
