@@ -20,8 +20,9 @@ func main() {
 	log.Print(utils.TextGreen("Server live at port http://localhost:" + port))
 
 	// * These are all the server routes.
-	http.HandleFunc("/", handlers.ReadyHandler)
-	http.HandleFunc("/redis", handlers.RedisHandler)
+	http.HandleFunc("/ready", handlers.ReadyHandler)
+	http.HandleFunc("/redis/ready", handlers.RedisReadyHandler)
+	http.HandleFunc("/sqlite/ready", handlers.SQLiteReadyHandler)
 
 	// * You can setup the server here.
 	s := &http.Server{

@@ -7,7 +7,8 @@
 ```plaintext
 http://localhost:3000
 /ready
-/redis
+/redis/ready
+/sqlite/ready
 ```
 
 
