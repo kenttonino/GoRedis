@@ -11,7 +11,7 @@ import (
 	"strconv"
 )
 
-func RedisHandler(w http.ResponseWriter, r *http.Request) {
+func RedisReadyHandler(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
 	redisClient := services.NewRedisClient()
 	_, err := redisClient.Ping(ctx).Result()
