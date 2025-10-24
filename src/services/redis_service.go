@@ -2,6 +2,11 @@ package services
 
 import "github.com/redis/go-redis/v9"
 
+type RedisPayload struct {
+	Id          string
+	Description string
+}
+
 func NewRedisClient() *redis.Client {
 	client := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
