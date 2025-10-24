@@ -1,4 +1,4 @@
-redis-docker:
+docker-redis:
 	# * Pull the latest Redis official image.
 	docker pull redis:latest
 	# * Launch the Redis container.
