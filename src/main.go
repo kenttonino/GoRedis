@@ -22,7 +22,8 @@ func main() {
 	// * These are all the server routes.
 	http.HandleFunc("/ready", handlers.ReadyHandler)
 	http.HandleFunc("/redis/ready", handlers.RedisReadyHandler)
-	http.HandleFunc("/sqlite/ready", handlers.SQLiteReadyHandler)
+	http.HandleFunc("/sql/ready", handlers.SQLReadyHandler)
+	http.HandleFunc("/sql/create/user/table", handlers.SQLCreateUserTableHandler)
 
 	// * You can setup the server here.
 	s := &http.Server{

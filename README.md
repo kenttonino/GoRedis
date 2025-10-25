@@ -8,7 +8,7 @@
 http://localhost:3000
 /ready
 /redis/ready
-/sqlite/ready
+/sql/ready
 ```
 
 
