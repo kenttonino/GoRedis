@@ -9,6 +9,7 @@ http://localhost:3000
 /ready
 /redis/ready
 /sql/ready
+/sql/create/user/table
 ```
 
 
