@@ -10,6 +10,13 @@ import (
 	"strconv"
 )
 
+func sqlRouteError(err string, w http.ResponseWriter) {
+	log.Println(utils.TextRed(err))
+	errResponse := &utils.HTTPResponse{Message: err, Status: http.StatusBadRequest}
+	errResponseJson, _ := json.Marshal(errResponse)
+	fmt.Fprint(w, string(errResponseJson))
+}
+
 func SQLReadyHandler(w http.ResponseWriter, r *http.Request) {
 	route := utils.SQLReadyRoute + " "
 
@@ -17,10 +24,7 @@ func SQLReadyHandler(w http.ResponseWriter, r *http.Request) {
 		db, err := services.CreateSQLInstance()
 
 		if err != nil {
-			log.Println(utils.TextRed(err.Error()))
-			errResponse := &utils.HTTPResponse{Message: err.Error(), Status: http.StatusBadRequest}
-			errResponseJson, _ := json.Marshal(errResponse)
-			fmt.Fprint(w, string(errResponseJson))
+			sqlRouteError(err.Error(), w)
 			return
 		}
 		defer db.Close()
@@ -43,10 +47,7 @@ func SQLCreateUserTableHandler(w http.ResponseWriter, r *http.Request) {
 		err := services.CreateSQLUserTable()
 
 		if err != nil {
-			log.Println(utils.TextRed(err.Error()))
-			errResponse := &utils.HTTPResponse{Message: err.Error(), Status: http.StatusBadRequest}
-			errResponseJson, _ := json.Marshal(errResponse)
-			fmt.Fprint(w, string(errResponseJson))
+			sqlRouteError(err.Error(), w)
 			return
 		}
 
